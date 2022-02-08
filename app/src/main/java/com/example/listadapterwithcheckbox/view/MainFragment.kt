@@ -38,7 +38,7 @@ class MainFragment : Fragment() {
 
         viewModel.click.observe(this, Observer {
             if (viewModel.selectItem.isNotEmpty()) {
-                Toast.makeText(requireActivity(), "${viewModel.selectItem}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireActivity(), "${viewModel.selectItem.joinTo(StringBuilder())}", Toast.LENGTH_SHORT).show()
             }
         })
     }
